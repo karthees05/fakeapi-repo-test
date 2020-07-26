@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.api.fakeapi'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-parent:1.5.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web:2.3.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-test:2.3.1.RELEASE'
+    compile 'org.springframework:spring-context:5.2.8.RELEASE'
+
+    compile "io.cucumber:cucumber-java:6.3.0"
+    compile 'io.cucumber:cucumber-junit:6.3.0'
+    compile 'io.cucumber:cucumber-spring:6.3.0'
+
+    compile 'io.rest-assured:rest-assured:4.3.1'
+
+}
