@@ -3,6 +3,7 @@ package com.api.fakeapi.automation.Runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -13,8 +14,7 @@ import org.junit.runner.RunWith;
                 "junit:target/cucumber-result.xml"},
         monochrome = true,
         features = "src/test/resources",
-        glue = {"com.api.fakeapi.automation.qa.steps"},
-        tags = "@fakeapi_scenario1"
+        glue = {"com.api.fakeapi.automation.qa.steps"}
 )
 
 public class RunCuke {

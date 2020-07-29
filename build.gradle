@@ -1,3 +1,4 @@
+
 plugins {
     id 'java'
 }
@@ -22,4 +23,24 @@ dependencies {
 
     compile 'io.rest-assured:rest-assured:4.3.1'
 
+    testImplementation 'io.cucumber:cucumber-java:6.2.2'
 }
+configurations {
+    cucumberRuntime {
+        extendsFrom testRuntime
+    }
+}
+task cucumber(type: JavaExec) {
+
+    /*javaexec {
+        main = "io.cucumber.core.cli.Main"
+        classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+        args = ['--plugin', 'pretty', '--glue', 'hellocucumber', 'src/test/resources']
+    }*/
+    group = 'application'
+    classpath = sourceSets.test.runtimeClasspath
+    main = 'org.junit.runner.JUnitCore'
+    args = ['com.api.fakeapi.automation.Runner.RunCuke']
+}
+
+

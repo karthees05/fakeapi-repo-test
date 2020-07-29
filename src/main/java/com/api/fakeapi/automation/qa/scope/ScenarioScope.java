@@ -1,5 +1,7 @@
 package com.api.fakeapi.automation.qa.scope;
 
+import io.cucumber.spring.CucumberContextConfiguration;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,10 +9,10 @@ import java.util.Map;
 public class ScenarioScope {
 
     //Store http headers
-    private Map<String, Object> headers;
+    private final Map<String, Object> headers;
 
     //Store json paths
-    private Map<String, Object> jsonPaths;
+    private final Map<String, Object> jsonPaths;
 
     public ScenarioScope() {
         headers = new HashMap<>();

@@ -4,6 +4,7 @@ import com.api.fakeapi.automation.qa.scope.ScenarioScope;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.ReadContext;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,6 +19,7 @@ import java.util.*;
  * Abstract step definition implementation
  * Http request are made using {@link RestTemplate} RestTemplate
  */
+
 @SuppressWarnings("unchecked")
 abstract class AbstractStepDefinitionConsumer {
 
