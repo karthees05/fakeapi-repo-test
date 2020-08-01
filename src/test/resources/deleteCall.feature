@@ -5,7 +5,7 @@ Feature: Validate the fake APIs
     Given baseUri is http://fakerestapi.azurewebsites.net
 
   @fakeapi_scenario3
-  Scenario: Validate POST Activities
+  Scenario: Validate DELETE Activities
     Given I set Accept header to application/json
     And I set Content-Type header to application/json
     When I DELETE /api/Authors/1

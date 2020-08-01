@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
                 "junit:target/cucumber-result.xml"},
         monochrome = true,
         features = "src/test/resources",
-        glue = {"com.api.fakeapi.automation.qa.steps"}
-)
+        glue = {"com.api.fakeapi.automation.qa.steps"}/*,
+        tags = {"@scenario_3"}*/)
 
 public class RunCuke {
 }

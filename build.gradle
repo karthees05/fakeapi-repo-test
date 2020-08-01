@@ -37,7 +37,7 @@ task cucumber(type: JavaExec) {
         classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
         args = ['--plugin', 'pretty', '--glue', 'hellocucumber', 'src/test/resources']
     }*/
-    group = 'application'
+//    group = 'application'
     classpath = sourceSets.test.runtimeClasspath
     main = 'org.junit.runner.JUnitCore'
     args = ['com.api.fakeapi.automation.Runner.RunCuke']
